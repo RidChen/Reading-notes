@@ -1,0 +1,149 @@
+//
+//  MainLayout.pch
+//  DummyTao
+//
+//  Created by 陈宇 on 2017/3/23.
+//  Copyright © 2017年 陈宇. All rights reserved.
+//
+
+#ifndef MainLayout_pch
+#define MainLayout_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+// UI controls‘ tag
+
+#define DEBUG_ON
+
+//秘钥
+#define gkey            @"123456789012345678901234"
+//向量
+#define gIv             @"01234567"
+
+// The path of the data
+#define DATA_PATH_USER_INFO   (@"Userinformation.archiver")
+#define DATA_PATH_APP_VERSION (@"AppVersion.archiver")
+
+// HTTP path
+#define HTTP_PATH_ROOT @"http://172.31.60.189/wsj/m/"
+#define HTTP_PATH_LOGIN @"login/login/1.0"
+#define HTTP_PATH_GET_APP_VERSION @"sys/getAppVersion/1.0"
+#define HTTP_PATH_AUTO_LOGIN @"login/appAutoLogin/1.0"
+#define HTTP_PATH_GET_ORDER_LIST @"store/order/getOrderList/1.0"
+
+// Search bar graphic attributes
+#define UI_MV_SEARCH_X      (0)
+#define UI_MV_SEARCH_Y      (0)
+#define UI_MV_SEARCH_HEIGHT (44)
+
+// Scroll view header graphic attributes
+#define UI_MV_CLT_SCRO_X      (0)
+#define UI_MV_CLT_SCRO_Y      (0)
+#define UI_MV_CLT_SCRO_HEIGHT (180)
+#define UI_MV_CLT_SCRO_VCOUNT (4)
+#define UI_MV_CLT_SCRO_ROW (1)
+#define UI_MV_CLT_SCRO_COLUMN (1)
+
+// Page control cell graphic attributes
+#define UI_MV_CLT_PCTRL_ABOVE_SV  (-20)
+#define UI_MV_CLT_PCTRL_X         (0)
+#define UI_MV_CLT_PCTRL_Y         (UI_MV_CLT_SCRO_HEIGHT + UI_MV_CLT_PCTRL_ABOVE_SV)
+#define UI_MV_CLT_PCTRL_HEIGHT    (20)
+#define UI_MV_CLT_PCTRL_COUNT     (UI_MV_CLT_SCRO_VCOUNT)
+
+// category cell graphic attributes
+#define UI_MV_CLT_CAT_X         (0)
+#define UI_MV_CLT_CAT_Y         (UI_MV_CLT_SCRO_Y + UI_MV_CLT_SCRO_HEIGHT)
+#define UI_MV_CLT_CAT_HEIGHT    (180)
+#define UI_MV_CLT_CAT_ROW       (2)
+#define UI_MV_CLT_CAT_COLUMN    (5)
+
+#define UI_MV_CLT_FOOTER_HEIGHT       (50)
+#define UI_MV_CLT_FOOTER_CONTENT_SIZE (150)
+
+// hot page cell graphic attributes
+#define UI_MV_CLT_HOT_HEIGHT    (160)
+#define UI_MV_CLT_HOT_ROW       (2)
+#define UI_MV_CLT_HOT_COLUMN    (2)
+
+#define UI_MV_CLT_CHP_ROW              (2)
+#define UI_MV_CLT_CHP_COLUMN           (4)
+#define UI_MV_CLT_CHP_HEIGHT           (160)
+#define UI_MV_CLT_CHP_WIDE_CELL        (2)
+#define UI_MV_CLT_CHP_HEADER_HEIGHT    (30)
+
+// collection view graphic attributes
+#define UI_MV_COLLECTION_X             (0)
+#define UI_MV_COLLECTION_Y             (0)
+#define UI_MV_COLLECTION_HEIGHT        (UI_MV_CLT_SCRO_HEIGHT + \
+                                        UI_MV_CLT_CAT_HEIGHT + \
+                                        UI_MV_CLT_HOT_HEIGHT + \
+                                        UI_MV_CLT_CHP_HEIGHT)
+
+// Goods information view graphic attributes
+#define UI_MSG_BUTTON_COUNT         (5)
+
+#define UI_MSG_UNPAYED_X            (0)
+#define UI_MSG_UNPAYED_Y            (64)
+#define UI_MSG_UNPAYED_WIDTH        (self.view.bounds.size.width / UI_MSG_BUTTON_COUNT)
+#define UI_MSG_UNPAYED_HEIGHT       (75)
+
+#define UI_MSG_UNSENDED_X            (UI_MSG_UNPAYED_X + UI_MSG_UNPAYED_WIDTH)
+#define UI_MSG_UNSENDED_Y            (UI_MSG_UNPAYED_Y)
+#define UI_MSG_UNSENDED_WIDTH        (UI_MSG_UNPAYED_WIDTH)
+#define UI_MSG_UNSENDED_HEIGHT       (UI_MSG_UNPAYED_HEIGHT)
+
+#define UI_MSG_SENDED_X            (UI_MSG_UNSENDED_X + UI_MSG_UNSENDED_WIDTH)
+#define UI_MSG_SENDED_Y            (UI_MSG_UNPAYED_Y)
+#define UI_MSG_SENDED_WIDTH        (UI_MSG_UNPAYED_WIDTH)
+#define UI_MSG_SENDED_HEIGHT       (UI_MSG_UNPAYED_HEIGHT)
+
+#define UI_MSG_UNCOMMENT_X            (UI_MSG_SENDED_X + UI_MSG_SENDED_WIDTH)
+#define UI_MSG_UNCOMMENT_Y            (UI_MSG_UNPAYED_Y)
+#define UI_MSG_UNCOMMENT_WIDTH        (UI_MSG_UNPAYED_WIDTH)
+#define UI_MSG_UNCOMMENT_HEIGHT       (UI_MSG_UNPAYED_HEIGHT)
+
+#define UI_MSG_FINISH_X            (UI_MSG_UNCOMMENT_X + UI_MSG_UNCOMMENT_WIDTH)
+#define UI_MSG_FINISH_Y            (UI_MSG_UNPAYED_Y)
+#define UI_MSG_FINISH_WIDTH        (UI_MSG_UNPAYED_WIDTH)
+#define UI_MSG_FINISH_HEIGHT       (UI_MSG_UNPAYED_HEIGHT)
+
+#define UI_MV_CLT_CAT_CELLID        (@"catCellId")
+#define UI_MV_CLT_CAT_HEADERID      (@"catHeaderId")
+#define UI_MV_CLT_CAT_FOOTERID      (@"catFooterId")
+#define UI_MV_CLT_HOT_CELLID        (@"hotCellId")
+//#define UI_MV_CLT_SCRO_CELLID       (@"ScrollCellId")
+#define UI_MV_CLT_CHP_CELLID        (@"supperCheepCellId")
+#define UI_MV_CLT_CHP_HEADERID      (@"supperCheepHeaderId")
+
+// Timer duration
+#define UI_TIMER_CLT_HEADER_DURATION  (2)
+#define UI_TIMER_CLT_FOOTER_DURATION  (2)
+#define UI_TIMER_CLT_REFRESH_DURATION (1)
+
+// Baidu Map private key
+#define MAP_BAIDU_PRIVATE_KEY (@"cZCF4WAid6zbMyqRn0faTqnu9XOGaMbg")
+
+typedef enum {
+    DataResultTypeSuccess        = 0,
+    DataResultTypeSessionError   = -1,
+    DataResultTypeInvalidToken   = -2,
+    DataResultTypeUnknownError   = -3,
+    DataResultTypeInvalidAccount = -4
+} DataResultType;
+
+typedef enum {
+    UI_MV_SEARCH_TAG    = 100,
+    UI_MV_SCOLLV_TAG,
+    UI_MV_PAGECTRL_TAG,
+    UI_MV_COLLECTV_TAG
+} UIMainViewTag;
+
+typedef enum {
+    UI_MV_CLT_ID_BEGIN  = 0,
+    UI_MV_CLT_ID_CAT    = UI_MV_CLT_ID_BEGIN,
+    UI_MV_CLT_ID_HOT,
+    UI_MV_CLT_ID_CHP,
+    UI_MV_CLT_ID_TOTAL
+} UIMVCLTSectionId;
+#endif /* MainLayout_pch */

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="SupperCheepHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLQ-ie-iBk">
+                    <rect key="frame" x="140" y="0.0" width="180" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="180" id="1e3-fS-Gff"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="1" green="0.63303477640000005" blue="0.087960150799999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="li2-lB-Xg0">
+                    <rect key="frame" x="120" y="0.0" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="li2-lB-Xg0" secondAttribute="height" multiplier="1:1" id="Qat-Fb-hB1"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="li2-lB-Xg0" secondAttribute="bottom" id="1r6-PH-hib"/>
+                <constraint firstAttribute="trailing" secondItem="XLQ-ie-iBk" secondAttribute="trailing" id="4Uc-0A-x7m"/>
+                <constraint firstItem="XLQ-ie-iBk" firstAttribute="height" secondItem="U6b-Vx-4bR" secondAttribute="height" id="FVP-8I-vcl"/>
+                <constraint firstItem="li2-lB-Xg0" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="fLz-Tx-gFK"/>
+                <constraint firstItem="li2-lB-Xg0" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="h8S-pk-wKm"/>
+                <constraint firstItem="XLQ-ie-iBk" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="jZ6-cE-o5m"/>
+                <constraint firstItem="XLQ-ie-iBk" firstAttribute="leading" secondItem="li2-lB-Xg0" secondAttribute="trailing" id="pm7-T4-BOu"/>
+            </constraints>
+            <connections>
+                <outlet property="icon" destination="li2-lB-Xg0" id="mYG-P8-vzf"/>
+                <outlet property="title" destination="XLQ-ie-iBk" id="K6D-rB-0F3"/>
+            </connections>
+        </collectionReusableView>
+    </objects>
+</document>
